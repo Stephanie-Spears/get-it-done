@@ -1,6 +1,9 @@
 from flask import Flask, request, redirect, render_template
 from flask_sqlalchemy import SQLAlchemy
-
+#installed Flask_Migrate onto flask-env, can be accessed with:
+#from flask_migrate import Migrate
+#migrate = Migrate(app, db)
+#Now I can create a migration repository with "flask db init" in terminal. Adds a migation folder to terminal. After that, can generate initial migration with "flask db migrate". Finally, you can apply the migration to the database with "flask db upgrade". Then each time the database models change, repeat the migrate and upgrade commands. To sync the db in another system just refresh migrations folder from source control and run the upgrade command. to see all commands, "flask db --help"
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
